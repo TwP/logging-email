@@ -1,4 +1,3 @@
-
 require 'net/smtp'
 require 'time' # get rfc822 time format
 
@@ -175,4 +174,3 @@ module Logging
     end
   end
 end
-

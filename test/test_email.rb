@@ -2,6 +2,9 @@ require 'flexmock'
 require 'logging'
 require Logging.path(%w[test setup])
 
+# initialize the Logging framework plugins
+Logging.initialize_plugins
+
 module TestLogging
   module TestAppenders
 

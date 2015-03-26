@@ -1,4 +1,3 @@
-
 module Logging
   module Plugins
     module Email
@@ -6,6 +5,8 @@ module Logging
 
       VERSION = '1.0.0'.freeze
 
+      # This method will be called by the Logging framework when it first
+      # initializes. Here we require the email appender code.
       def initialize_email
         require File.expand_path('../../appenders/email', __FILE__)
       end
