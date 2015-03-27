@@ -62,18 +62,18 @@ module Logging
       #
       # Setup an email appender that will buffer messages for up to 1 minute,
       # and only send messages for ERROR and FATAL messages. This example uses
-      # Google's SMTP server with authentication to send out messages.
+      # Google's Gmail SMTP server with authentication to send out messages.
       #
-      #   Logger.appenders.email( 'email',
+      #   Logger.appenders.email( 'gmail',
       #       :from       => "server@example.com",
       #       :to         => "developers@example.com",
       #       :subject    => "Application Error [#{%x(uname -n).strip}]",
       #
-      #       :address    => "smtp.google.com",
+      #       :address    => "smtp.gmail.com",
       #       :port       => 443,
-      #       :domain     => "google.com",
-      #       :user_name  => "example",
-      #       :password   => "12345",
+      #       :domain     => "gmail.com",
+      #       :user_name  => ENV["GMAIL_USER"],
+      #       :password   => ENV["GMAIL_PASS"],
       #       :authentication => :plain,
       #       :enable_starttls_auto => true,
       #
